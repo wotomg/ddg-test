@@ -10,7 +10,7 @@ created: 2023-05-07
 - [x] контейнер grafana
 	- [x] Разобраться где хранятся конфиги, dashboards, datasource
 	- [x] Создать datasource для prometheus
-	- [ ] Разобраться с PromQL
+	- [x] Разобраться с PromQL
 	- [ ] Создать dashboard Mysql
 	- [ ] Создать dashboard OS General
 - [x] Контейнер prometheus
