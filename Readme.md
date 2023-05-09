@@ -17,7 +17,7 @@ cd ddg-test-main
 ```
 
 
-2. На хостовой системе, с ОС Debian 10, нужно установить docker и docker-compose. Запускается с павами root.
+2. На хостовой системе, с ОС Debian 10, нужно установить docker и docker-compose. Команды запускаются с правами root.
 ```bash
 su
 ```

@@ -44,7 +44,9 @@ services:
     hostname: mysql.local
     restart: always
     volumes:
-      - ./configs/prometheus:/opt/bitnami/prometheus/conf/:ro
+      - ./configs/mysql/etcmysql/:/etc/mysql/:ro
+      - ./configs/mysql/my.cnf:/etc/my.cnf:ro
+      - ./configs/mysql/my.cnf.d/:/etc/my.cnf.d/:ro
       - ./mysqldb:/var/lib/mysql
     env_file:
       - mysql.env
