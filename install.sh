@@ -26,7 +26,9 @@ systemctl enable docker.service
 #     echo "!!!!!!!!!!!\nSOMETHING WENT WRONG\n!!!!!!!!!!!"
 # fi
 
-/sbin/usermod -aG docker $1
+username=$(cat /tmp/username)
+
+/sbin/usermod -aG docker $username
 
 # INSTALLING PROMETHEUS
 wget -P /tmp/ https://github.com/prometheus/node_exporter/releases/download/v1.5.0/node_exporter-1.5.0.linux-amd64.tar.gz
