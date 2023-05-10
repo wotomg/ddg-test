@@ -41,7 +41,7 @@ mv /opt/node_exporter-1.5.0.linux-amd64/ /opt/node_exporter/
 
 chown node_exporter:node_exporter /opt/node_exporter/ -R
 
-cp etc/node_exporter.service /etc/systemd/system/node_exporter.service
+cp systemd/node_exporter.service /etc/systemd/system/node_exporter.service
 
 systemctl daemon-reload
 
