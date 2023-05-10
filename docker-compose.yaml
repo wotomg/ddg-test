@@ -35,8 +35,8 @@ services:
     ports:
       - "9090:9090"
 #    network_mode: host
-#    extra_hosts:
-#      - "host.docker.internal:host-gateway"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
 
   mysql:
     image: mysql:5.7
