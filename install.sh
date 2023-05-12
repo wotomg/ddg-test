@@ -20,13 +20,14 @@ apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin do
 systemctl start docker.service
 systemctl enable docker.service
 
-# if [[ systemctl is-active --quiet docker && systemctl is-enabled --quiet docker ]]; then
-#   echo "Docker is runing and activated on system boot"
-#   else
-#     echo "!!!!!!!!!!!\nSOMETHING WENT WRONG\n!!!!!!!!!!!"
-# fi
+if $(systemctl is-active --quiet docker) && $(systemctl is-enabled --quiet docker); then
+  echo "Docker is runing and activated on system boot"
+  else
+    echo "!!!!!!!!!!!\nSOMETHING WENT WRONG\n!!!!!!!!!!!"
+fi# fi
 
 username=$(cat /tmp/username)
+rm /tmp/username
 
 /sbin/usermod -aG docker $username
 

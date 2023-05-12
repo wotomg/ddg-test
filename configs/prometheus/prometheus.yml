@@ -32,3 +32,8 @@ scrape_configs:
     scrape_interval: 5s
     static_configs:
       - targets: ['host.docker.internal:9100']
+
+  - job_name: 'mysql'
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['mysqld-exporter.local:9104']
